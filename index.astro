@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyRepublic — Paket Internet Fiber Optic Terbaik</title>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --navy:        #0d0a0b;
+            --navy2:       #1a0f10;
+            --navy3:       #2a1215;
+            --accent:      #e30613;
+            --accent2:     #ff3344;
+            --accent-glow: rgba(227,6,19,0.15);
+            --text:        #f5e8e9;
+            --text-muted:  #b89496;
+            --border:      rgba(227,6,19,0.22);
+            --border-soft: rgba(255,255,255,0.06);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--navy);
+            color: var(--text);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+        body::before {
+            content: '';
+            position: fixed; inset: 0;
+            background-image:
+                linear-gradient(rgba(227,6,19,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(227,6,19,0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none; z-index: 0;
+        }
+        .container { max-width: 1120px; margin: 0 auto; padding: 0 24px; position: relative; z-index: 1; }
+
+        /* ── NAVBAR ── */
+        nav {
+            position: fixed; top: 0; left: 0; right: 0;
+            padding: 0; z-index: 999;
+            border-bottom: 1px solid var(--border-soft);
+            backdrop-filter: blur(20px);
+            background: rgba(13,10,11,0.88);
+        }
+        .nav-inner {
+            max-width: 1120px; margin: 0 auto; padding: 0 24px;
+            display: flex; justify-content: space-between; align-items: center;
+            height: 68px;
+        }
+        .logo {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 22px; font-weight: 700;
+            text-decoration: none; color: var(--text);
+            letter-spacing: -0.5px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .nav-links { display: flex; align-items: center; gap: 6px; }
+        .nav-links a {
+            text-decoration: none; color: var(--text-muted);
+            font-size: 14px; font-weight: 500;
+            padding: 8px 16px; border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .nav-links a:hover { color: var(--text); background: var(--border-soft); }
+        .btn-nav-cta {
+            background: var(--accent) !important;
+            color: white !important;
+            border-radius: 8px !important;
+            font-weight: 600 !important;
+        }
+        .btn-nav-cta:hover { background: var(--accent2) !important; }
+        @media (max-width: 768px) { .nav-links { display: none; } }
+
+        /* ── HERO ── */
+        .hero {
+            min-height: 60vh;
+            display: flex; align-items: center;
+            padding: 120px 0 60px;
+            position: relative; overflow: hidden;
+            text-align: center;
+        }
+        .hero-glow {
+            position: absolute; top: 20%; left: 50%;
+            transform: translateX(-50%);
+            width: 800px; height: 400px;
+            background: radial-gradient(ellipse, rgba(227,6,19,0.13) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .orb {
+            position: absolute; border-radius: 50%;
+            filter: blur(80px); pointer-events: none;
+            animation: float 8s ease-in-out infinite;
+        }
+        .orb1 { width: 260px; height: 260px; background: rgba(227,6,19,0.08); top: 15%; left: 5%; }
+        .orb2 { width: 180px; height: 180px; background: rgba(180,20,30,0.06); top: 55%; right: 5%; animation-delay: -3s; }
+        @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+
+        .hero-eyebrow {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(227,6,19,0.08);
+            border: 1px solid var(--border);
+            padding: 6px 16px; border-radius: 100px;
+            font-size: 12px; font-weight: 600; letter-spacing: 1px;
+            text-transform: uppercase; color: var(--accent2);
+            margin-bottom: 28px;
+        }
+        .eyebrow-dot {
+            width: 6px; height: 6px; border-radius: 50%;
+            background: var(--accent);
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:.5; transform:scale(.8); } }
+
+        .hero h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(36px, 6vw, 64px);
+            font-weight: 700; line-height: 1.08;
+            letter-spacing: -2px; color: #fff;
+            margin-bottom: 20px;
+        }
+        .h1-accent {
+            background: linear-gradient(90deg, var(--accent), var(--accent2), #ff8c94);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 17px; color: var(--text-muted);
+            max-width: 540px; margin: 0 auto 36px; line-height: 1.7;
+        }
+        .hero-badges {
+            display: flex; gap: 10px; justify-content: center;
+            flex-wrap: wrap; margin-bottom: 36px;
+        }
+        .hero-badge {
+            background: var(--navy2);
+            border: 1px solid var(--border-soft);
+            padding: 6px 14px; border-radius: 8px;
+            font-size: 13px; font-weight: 600; color: var(--text-muted);
+            display: flex; align-items: center; gap: 6px;
+        }
+        .hero-badge .ok { color: #4ade80; }
+        .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        .btn-primary {
+            background: var(--accent); color: white;
+            padding: 14px 28px; border-radius: 10px;
+            text-decoration: none; font-weight: 600; font-size: 15px;
+            display: inline-flex; align-items: center; gap: 8px;
+            transition: all 0.25s;
+        }
+        .btn-primary:hover { background: var(--accent2); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(227,6,19,0.3); }
+        .btn-ghost {
+            background: transparent; color: var(--text);
+            border: 1px solid var(--border);
+            padding: 14px 28px; border-radius: 10px;
+            text-decoration: none; font-weight: 600; font-size: 15px;
+            display: inline-flex; align-items: center; gap: 8px;
+            transition: all 0.25s;
+        }
+        .btn-ghost:hover { background: var(--border-soft); border-color: var(--accent); color: var(--accent2); transform: translateY(-2px); }
+
+        /* ── STATS BAR ── */
+        .stats-bar {
+            padding: 32px 0;
+            border-top: 1px solid var(--border-soft);
+            border-bottom: 1px solid var(--border-soft);
+            background: rgba(26,15,16,0.6);
+        }
+        .stats-inner { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; }
+        .stat-item { text-align: center; padding: 16px; border-right: 1px solid var(--border-soft); }
+        .stat-item:last-child { border-right: none; }
+        .stat-num {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px; font-weight: 700; color: var(--accent);
+            line-height: 1; margin-bottom: 4px;
+        }
+        .stat-label { font-size: 13px; color: var(--text-muted); font-weight: 500; }
+        @media (max-width: 640px) {
+            .stats-inner { grid-template-columns: repeat(2,1fr); }
+            .stat-item:nth-child(2) { border-right: none; }
+            .stat-item:nth-child(3),
+            .stat-item:nth-child(4) { border-top: 1px solid var(--border-soft); }
+            .stat-item:nth-child(4) { border-right: none; }
+        }
+
+        /* ── SECTION COMMON ── */
+        .section-label {
+            font-size: 12px; font-weight: 700; letter-spacing: 2px;
+            text-transform: uppercase; color: var(--accent); margin-bottom: 12px;
+        }
+        .section-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(28px, 4vw, 44px);
+            font-weight: 700; letter-spacing: -1px;
+            color: #fff; margin-bottom: 12px;
+        }
+        .section-sub {
+            font-size: 16px; color: var(--text-muted);
+            max-width: 520px; margin-bottom: 48px; line-height: 1.7;
+        }
+
+        /* ── KEUNGGULAN BAR ── */
+        .keunggulan { padding: 72px 0; background: var(--navy2); border-bottom: 1px solid var(--border-soft); }
+        .k-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr)); gap: 0; }
+        .k-item { padding: 24px 28px; border-right: 1px solid var(--border-soft); }
+        .k-item:last-child { border-right: none; }
+        .k-icon { font-size: 28px; margin-bottom: 10px; }
+        .k-title { font-size: 14px; font-weight: 700; color: #fff; margin-bottom: 4px; }
+        .k-desc { font-size: 13px; color: var(--text-muted); line-height: 1.6; }
+        @media (max-width: 640px) {
+            .k-grid { grid-template-columns: 1fr 1fr; }
+            .k-item { border-bottom: 1px solid var(--border-soft); }
+            .k-item:nth-child(even) { border-right: none; }
+        }
+
+        /* ── PRICING ── */
+        .pricing { padding: 88px 0; position: relative; }
+        .pricing-tabs { display: flex; gap: 10px; margin-bottom: 40px; flex-wrap: wrap; }
+        .ptab {
+            padding: 10px 22px; border-radius: 50px;
+            border: 1px solid var(--border-soft);
+            background: var(--navy2); color: var(--text-muted);
+            font-size: 14px; font-weight: 600; cursor: pointer;
+            transition: all 0.22s; font-family: 'Inter', sans-serif;
+        }
+        .ptab.active, .ptab:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+        .pricing-panel { display: none; }
+        .pricing-panel.active { display: block; }
+
+        .pricing-subtabs { display: flex; gap: 8px; margin-bottom: 28px; flex-wrap: wrap; }
+        .psubtab {
+            padding: 7px 16px; border-radius: 8px;
+            border: 1px solid var(--border-soft);
+            background: transparent; color: var(--text-muted);
+            font-size: 13px; font-weight: 500; cursor: pointer;
+            transition: all 0.2s; font-family: 'Inter', sans-serif;
+        }
+        .psubtab.active, .psubtab:hover {
+            background: rgba(227,6,19,0.18);
+            border-color: var(--accent); color: #ffaaad;
+        }
+        .subpanel { display: none; }
+        .subpanel.active { display: block; }
+
+        .pkg-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px,1fr)); gap: 14px; }
+        .pkg-card {
+            background: var(--navy2); border: 1px solid var(--border-soft);
+            border-radius: 16px; padding: 26px 22px;
+            position: relative; transition: all 0.28s;
+        }
+        .pkg-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 12px 32px rgba(227,6,19,0.18); }
+        .pkg-card.featured { border-color: var(--accent); background: linear-gradient(135deg, rgba(227,6,19,0.12), rgba(180,10,20,0.05)); }
+        .pkg-badge {
+            position: absolute; top: -10px; right: 14px;
+            background: linear-gradient(90deg, var(--accent), #c00010);
+            color: #fff; font-size: 11px; font-weight: 700;
+            padding: 3px 10px; border-radius: 50px; letter-spacing: 0.5px;
+        }
+        .pkg-name { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 6px; }
+        .pkg-speed {
+            display: inline-block;
+            background: rgba(227,6,19,0.18); border: 1px solid rgba(227,6,19,0.35);
+            color: #ffaaad; font-size: 12px; font-weight: 700;
+            padding: 3px 10px; border-radius: 6px; margin-bottom: 14px;
+        }
+        .pkg-upgrade { font-size: 11px; color: #fbbf24; margin-bottom: 10px; display: block; }
+        .pkg-price { font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 4px; }
+        .pkg-price-sub { font-size: 12px; color: var(--text-muted); margin-bottom: 14px; }
+        .pkg-bonus {
+            display: inline-flex; align-items: center; gap: 5px;
+            background: rgba(251,191,36,0.1); border: 1px solid rgba(251,191,36,0.25);
+            color: #fbbf24; font-size: 12px; font-weight: 600;
+            padding: 4px 10px; border-radius: 6px; margin-bottom: 14px;
+        }
+        .pkg-features { display: flex; flex-direction: column; gap: 5px; margin-top: 14px; }
+        .pkg-feat { font-size: 12.5px; color: var(--text-muted); display: flex; align-items: flex-start; gap: 6px; }
+        .pkg-feat::before { content: '✓'; color: #4ade80; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+        .pkg-note {
+            font-size: 12px; color: var(--text-muted); text-align: center;
+            margin-top: 20px; padding: 10px 14px;
+            background: rgba(255,255,255,0.03);
+            border-radius: 8px; border: 1px solid var(--border-soft);
+        }
+        .lippo-note {
+            font-size: 14px; color: var(--text-muted); margin-bottom: 24px;
+            padding: 14px 18px;
+            background: rgba(227,6,19,0.06);
+            border: 1px solid rgba(227,6,19,0.15);
+            border-radius: 10px;
+        }
+
+        .ap-table-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--border-soft); }
+        .ap-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+        .ap-table thead th {
+            background: rgba(227,6,19,0.18); color: #ffaaad;
+            font-weight: 700; padding: 10px 13px;
+            text-align: left; white-space: nowrap;
+            border-bottom: 1px solid var(--border-soft);
+        }
+        .ap-table thead th.center { text-align: center; }
+        .ap-table tbody tr:nth-child(even) { background: rgba(255,255,255,0.02); }
+        .ap-table tbody tr:hover { background: rgba(227,6,19,0.07); }
+        .ap-table td { padding: 8px 13px; color: var(--text-muted); border-bottom: 1px solid rgba(255,255,255,0.04); white-space: nowrap; }
+        .ap-table td.bold { color: #fff; font-weight: 600; }
+        .ap-table td.center { text-align: center; }
+        .ap-table td.red { color: #ffaaad; font-weight: 600; }
+        .ap-table .ap-section td {
+            background: rgba(227,6,19,0.12); color: #ff8c94;
+            font-weight: 700; font-size: 12px;
+            letter-spacing: 1px; text-transform: uppercase; padding: 6px 13px;
+        }
+        .ap-na { color: #ef4444 !important; font-weight: 700; }
+
+        /* ── CTA BAND ── */
+        .cta-band { padding: 72px 0; border-top: 1px solid var(--border-soft); }
+        .cta-box {
+            background: var(--navy2); border: 1px solid var(--border);
+            border-radius: 20px; padding: 60px 48px; text-align: center;
+            position: relative; overflow: hidden;
+        }
+        .cta-box::before {
+            content: ''; position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 50% 0%, rgba(227,6,19,0.1) 0%, transparent 60%);
+            pointer-events: none;
+        }
+        .cta-box h2 { font-family: 'Space Grotesk', sans-serif; font-size: clamp(24px,4vw,38px); font-weight: 700; letter-spacing: -1px; color: #fff; margin-bottom: 12px; }
+        .cta-box p { font-size: 15px; color: var(--text-muted); margin-bottom: 28px; }
+        .cta-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+        @media (max-width: 640px) { .cta-box { padding: 40px 24px; } }
+
+        /* ── FOOTER ── */
+        footer { border-top: 1px solid var(--border-soft); padding: 36px 0; text-align: center; }
+        .footer-logo { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: var(--text-muted); margin-bottom: 6px; }
+        .footer-logo span { color: var(--accent); }
+        footer p { font-size: 13px; color: var(--text-muted); }
+
+        /* ── POPUP PILIHAN (WELCOME MODAL) ── */
+        .modal-overlay {
+            position: fixed; inset: 0; z-index: 2000;
+            background: rgba(0,0,0,0.75);
+            backdrop-filter: blur(6px);
+            display: none; align-items: center; justify-content: center;
+            padding: 20px;
+        }
+        .modal-overlay.show { display: flex; animation: fadeIn 0.25s ease; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .modal {
+            background: var(--navy2); border: 1px solid var(--border);
+            border-radius: 22px; width: 100%; max-width: 460px;
+            max-height: 92vh; overflow-y: auto;
+            padding: 32px 28px 28px; position: relative;
+            box-shadow: 0 30px 80px rgba(0,0,0,0.6);
+            animation: popIn 0.35s cubic-bezier(0.34,1.56,0.64,1);
+        }
+        @keyframes popIn { from { opacity:0; transform:translateY(20px) scale(.96); } to { opacity:1; transform:translateY(0) scale(1); } }
+        .modal-close {
+            position: absolute; top: 14px; right: 16px;
+            background: none; border: none; color: var(--text-muted);
+            font-size: 26px; line-height: 1; cursor: pointer;
+        }
+        .modal-close:hover { color: #fff; }
+        .modal-logo { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 800; color: #fff; text-align: center; margin-bottom: 6px; }
+        .modal-logo span { color: var(--accent); }
+        .modal h3 { font-family: 'Space Grotesk', sans-serif; font-size: 20px; color: #fff; text-align: center; margin-bottom: 6px; }
+        .modal-sub { font-size: 14px; color: var(--text-muted); text-align: center; margin-bottom: 22px; }
+        .choice-btn {
+            width: 100%; display: flex; align-items: center; gap: 14px;
+            text-align: left; cursor: pointer;
+            background: var(--navy); border: 1px solid var(--border-soft);
+            border-radius: 14px; padding: 16px 18px; margin-bottom: 12px;
+            color: var(--text); font-family: 'Inter', sans-serif;
+            transition: all 0.22s;
+        }
+        .choice-btn:hover { border-color: var(--accent); background: rgba(227,6,19,0.08); transform: translateY(-2px); }
+        .choice-num {
+            flex-shrink: 0; width: 34px; height: 34px; border-radius: 10px;
+            background: var(--accent); color: #fff; font-weight: 800;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        .choice-text strong { display: block; font-size: 15px; color: #fff; margin-bottom: 2px; }
+        .choice-text span { font-size: 12.5px; color: var(--text-muted); }
+
+        .info-list { display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+        .info-item {
+            display: block; text-decoration: none;
+            background: var(--navy); border: 1px solid var(--border-soft);
+            border-radius: 12px; padding: 13px 16px;
+            transition: all 0.2s;
+        }
+        a.info-item:hover { border-color: var(--accent); background: rgba(227,6,19,0.08); }
+        .info-item strong { display: block; font-size: 14px; color: #fff; margin-bottom: 2px; }
+        .info-item span { font-size: 13px; color: #ffaaad; word-break: break-all; }
+        .info-item p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+        .info-item p b { color: #fff; }
+        .btn-ig {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            background: linear-gradient(135deg, #c2185b, #e91e8c);
+            color: white; font-weight: 700; font-size: 14px;
+            padding: 12px 16px; border-radius: 12px; text-decoration: none;
+            box-shadow: 0 4px 16px rgba(233,30,140,0.3);
+        }
+        .btn-back {
+            display: block; width: 100%; margin-top: 12px; padding: 10px;
+            background: transparent; border: 1px solid var(--border-soft);
+            border-radius: 10px; color: var(--text-muted); cursor: pointer;
+            font-size: 13px; font-family: 'Inter', sans-serif;
+        }
+        .btn-back:hover { color: #fff; border-color: var(--accent); }
+        .modal-step { display: none; }
+        .modal-step.active { display: block; }
+
+        /* ── REVEAL ANIMATION ── */
+        .reveal { opacity:0; transform:translateY(24px); transition: opacity .6s ease, transform .6s ease; }
+        .reveal.visible { opacity:1; transform:translateY(0); }
+
+        @media (max-width: 480px) { .pkg-grid { grid-template-columns: 1fr; } .modal { padding: 28px 20px 22px; } }
+        @media (max-width: 768px) { .pkg-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 480px) { .pkg-grid { grid-template-columns: 1fr; } }
+        @media (prefers-reduced-motion: reduce) { *, .orb { animation: none !important; transition: none !important; } }
+
+        /* FAQ */
+        .faq-item { background:var(--navy); border:1px solid var(--border-soft); border-radius:12px; overflow:hidden; }
+        .faq-q { padding:18px 22px; font-size:15px; font-weight:600; color:#fff; cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:14px; user-select:none; }
+        .faq-q:hover { color:var(--accent2); }
+        .faq-arrow { font-size:18px; color:var(--accent); transition:transform .3s; flex-shrink:0; }
+        .faq-item.open .faq-arrow { transform:rotate(45deg); }
+        .faq-a { max-height:0; overflow:hidden; transition:max-height .35s ease; }
+        .faq-item.open .faq-a { max-height:200px; }
+        .faq-a p { padding:0 22px 18px; font-size:14px; color:var(--text-muted); line-height:1.8; }
+    </style>
+</head>
+<body>
+
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+
+    <!-- ── NAVBAR ── -->
+    <nav>
+        <div class="nav-inner">
+            <a href="#" class="logo">
+                <span style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:800;color:#fff;">My<span style="color:var(--accent);">Republic</span></span>
+            </a>
+            <div class="nav-links">
+                <a href="#harga">Paket</a>
+                <a href="#keunggulan">Keunggulan</a>
+                <a href="#" data-open-bantuan>Pusat Bantuan</a>
+                <a href="#faq">FAQ</a>
+                <a href="https://wa.me/6285167313400" class="btn-nav-cta">Daftar Sekarang</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ── HERO ── -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <div class="container" style="width:100%;">
+            <div class="hero-eyebrow"><span class="eyebrow-dot"></span> Internet Fiber Optic Terbaik</div>
+            <h1>
+                Internet Cepat,<br>
+                <span class="h1-accent">Tanpa Batas Kuota</span>
+            </h1>
+            <p>MyRepublic hadir dengan teknologi 100% Full Fiber Optic — koneksi simetris 1:1, stabil, dan gratis instalasi untuk rumah Anda.</p>
+
+            <div class="hero-badges">
+                <span class="hero-badge"><span class="ok">✓</span> Gratis Instalasi</span>
+                <span class="hero-badge"><span class="ok">✓</span> Simetris 1:1</span>
+                <span class="hero-badge"><span class="ok">✓</span> Unlimited</span>
+                <span class="hero-badge"><span class="ok">✓</span> Full Fiber Optic</span>
+            </div>
+
+            <div class="hero-actions">
+                <a href="#harga" class="btn-primary">📦 Lihat Paket</a>
+                <a href="https://wa.me/6285167313400" class="btn-ghost">💬 Tanya via WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── STATS BAR ── -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-inner">
+                <div class="stat-item">
+                    <div class="stat-num">1:1</div>
+                    <div class="stat-label">Simetris Upload & Download</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">100%</div>
+                    <div class="stat-label">Full Fiber Optic</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">∞</div>
+                    <div class="stat-label">Tanpa Batas Kuota</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-num">24/7</div>
+                    <div class="stat-label">Dukungan Pelanggan</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ── KEUNGGULAN ── -->
+    <section id="keunggulan" class="keunggulan">
+        <div class="container">
+            <div class="k-grid">
+                <div class="k-item">
+                    <div class="k-icon">⚡</div>
+                    <div class="k-title">Kecepatan Penuh</div>
+                    <div class="k-desc">Upload & download sama cepat, tidak ada throttling.</div>
+                </div>
+                <div class="k-item">
+                    <div class="k-icon">🛡️</div>
+                    <div class="k-title">Tahan Cuaca Ekstrim</div>
+                    <div class="k-desc">Fiber optic tidak terpengaruh hujan & petir.</div>
+                </div>
+                <div class="k-item">
+                    <div class="k-icon">📡</div>
+                    <div class="k-title">Jaringan Stabil</div>
+                    <div class="k-desc">Latensi rendah, cocok untuk gaming & video call.</div>
+                </div>
+                <div class="k-item">
+                    <div class="k-icon">🔧</div>
+                    <div class="k-title">Gratis Instalasi</div>
+                    <div class="k-desc">Tidak ada biaya pemasangan tersembunyi.</div>
+                </div>
+                <div class="k-item">
+                    <div class="k-icon">💰</div>
+                    <div class="k-title">Harga Terjangkau</div>
+                    <div class="k-desc">Paket mulai Rp 233.100/bulan sudah termasuk PPN.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── PRICING ── -->
+    <section id="harga" class="pricing">
+        <div class="container">
+            <p class="section-label reveal">Paket Internet</p>
+            <h2 class="section-title reveal">Pilih Paket MyRepublic</h2>
+            <p class="section-sub reveal">Internet simetris 1:1 Upload &amp; Download, tanpa batas kuota, 100% Full Fiber Optic. Gratis instalasi.</p>
+
+            <!-- MAIN TABS -->
+            <div class="pricing-tabs reveal">
+                <button class="ptab active" data-tab="umum">🌐 Area Umum</button>
+                <button class="ptab" data-tab="lippo">🏘️ Area Lippo Property</button>
+                <button class="ptab" data-tab="partner">🤝 Area Partnership</button>
+            </div>
+
+            <!-- ── AREA UMUM ── -->
+            <div class="pricing-panel active" id="panel-umum">
+                <div class="pricing-subtabs">
+                    <button class="psubtab active" data-tab="umum" data-sub="monthly">Bulanan (Harga Special)</button>
+                    <button class="psubtab" data-tab="umum" data-sub="ap9">Advance Payment 9+3</button>
+                    <button class="psubtab" data-tab="umum" data-sub="ap12">Advance Payment 12+6</button>
+                </div>
+
+                <!-- MONTHLY -->
+                <div class="subpanel active" id="umum-monthly">
+                    <div class="pkg-grid">
+                        <div class="pkg-card">
+                            <div class="pkg-name">NEO</div>
+                            <div class="pkg-speed">Up to 200 Mbps</div>
+                            <span class="pkg-upgrade">🔥 Free Upgrade 6 Bln (dari 100 Mbps)</span>
+                            <div class="pkg-price">Rp 233.100</div>
+                            <div class="pkg-price-sub">/bulan · sudah termasuk PPN</div>
+                            <div class="pkg-features">
+                                <span class="pkg-feat">Simetris 1:1 Upload &amp; Download</span>
+                                <span class="pkg-feat">Tanpa batas kuota (Unlimited)</span>
+                                <span class="pkg-feat">100% Full Fiber Optic</span>
+                                <span class="pkg-feat">Gratis instalasi</span>
+                            </div>
+                        </div>
+                        <div class="pkg-card featured">
+                            <div class="pkg-badge">RECOMMENDED</div>
+                            <div class="pkg-name">VELO</div>
+                            <div class="pkg-speed">Up to 300 Mbps</div>
+                            <span class="pkg-upgrade">🔥 Free Upgrade 6 Bln (dari 150 Mbps)</span>
+                            <div class="pkg-price">Rp 277.500</div>
+                            <div class="pkg-price-sub">/bulan · sudah termasuk PPN</div>
+                            <div class="pkg-features">
+                                <span class="pkg-feat">Simetris 1:1 Upload &amp; Download</span>
+                                <span class="pkg-feat">Tanpa batas kuota (Unlimited)</span>
+                                <span class="pkg-feat">100% Full Fiber Optic</span>
+                                <span class="pkg-feat">Gratis instalasi</span>
+                            </div>
+                        </div>
+                        <div class="pkg-card featured">
+                            <div class="pkg-badge">RECOMMENDED</div>
+                            <div class="pkg-name">NEXUS</div>
+                            <div class="pkg-speed">Up to 400 Mbps</div>
+                            <span class="pkg-upgrade">🔥 Free Upgrade 6 Bln (dari 300 Mbps)</span>
+                            <div class="pkg-price">Rp 333.000</div>
+                            <div class="pkg-price-sub">/bulan · sudah termasuk PPN</div>
+                            <div class="pkg-features">
+                                <span class="pkg-feat">Simetris 1:1 Upload &amp; Download</span>
+                                <span class="pkg-feat">Tanpa batas kuota (Unlimited)</span>
+                                <span class="pkg-feat">100% Full Fiber Optic</span>
+                                <span class="pkg-feat">Gratis instalasi</span>
+                            </div>
+                        </div>
+                        <div class="pkg-card">
+                            <div class="pkg-name">PRIME</div>
+                            <div class="pkg-speed">500 Mbps</div>
+                            <div class="pkg-price">Rp 555.000</div>
+                            <div class="pkg-price-sub">/bulan · sudah termasuk PPN</div>
+                            <div class="pkg-bonus">🎬 FREE Vidio Platinum Lite</div>
+                            <div class="pkg-features">
+                                <span class="pkg-feat">Simetris 1:1 Upload &amp; Download</span>
+                                <span class="pkg-feat">Tanpa batas kuota (Unlimited)</span>
+                                <span class="pkg-feat">100% Full Fiber Optic</span>
+                                <span class="pkg-feat">Gratis instalasi</span>
+                            </div>
+                        </div>
+                        <div class="pkg-card">
+                            <div class="pkg-name">WONDER</div>
+                            <div class="pkg-speed">750 Mbps</div>
+                            <div class="pkg-price">Rp 721.500</div>
+                            <div class="pkg-price-sub">/bulan · sudah termasuk PPN</div>
+                            <div class="pkg-bonus">🎬 FREE Vidio Platinum Lite</div>
+                            <div class="pkg-features">
+                                <span class="pkg-feat">Simetris 1:1 Upload &amp; Download</span>
+                                <span class="pkg-feat">Tanpa batas kuota (Unlimited)</span>
+                                <span class="pkg-feat">100% Full Fiber Optic</span>
+                                <span class="pkg-feat">Gratis instalasi</span>
+                            </div>
+                        </div>
+                        <div class="pkg-card">
+                            <div class="pkg-name">ULTRA</div>
+                            <div class="pkg-speed">1 Gbps</div>
+                            <div class="pkg-price">Rp 943.500</div>
+                            <div class="pkg-price-sub">/bulan · sudah termasuk PPN</div>
+                            <div class="pkg-bonus">🎬 FREE Vidio Platinum Lite</div>
+                            <div class="pkg-features">
+                                <span class="pkg-feat">Simetris 1:1 Upload &amp; Download</span>
+                                <span class="pkg-feat">Tanpa batas kuota (Unlimited)</span>
+                                <span class="pkg-feat">100% Full Fiber Optic</span>
+                                <span class="pkg-feat">Gratis instalasi</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="pkg-note">Semua harga sudah termasuk PPN · Gratis Instalasi · Internet Simetris 1:1</p>
+                </div>
+
+                <!-- AP 9 GET 3 -->
+                <div class="subpanel" id="umum-ap9">
+                    <div class="ap-table-wrap">
+                        <table class="ap-table">
+                            <thead>
+                                <tr>
+                                    <th>Paket</th><th>Harga Tematik</th>
+                                    <th class="center" colspan="2">Harga AP (Before / After PPN)</th>
+                                    <th class="center" colspan="2">Setara/Bln (Before / After PPN)</th>
+                                </tr>
+                                <tr><th></th><th></th><th>Before PPN</th><th>After PPN</th><th>Before PPN</th><th>After PPN</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ap-section"><td colspan="6">Internet Only — AP 9 Get 3</td></tr>
+                                <tr><td class="bold">Neo100</td><td>210.000</td><td class="ap-na">✗</td><td class="ap-na">✗</td><td class="ap-na">✗</td><td class="ap-na">✗</td></tr>
+                                <tr><td class="bold">Velo150</td><td>250.000</td><td class="red">2.250.000</td><td>2.497.500</td><td>187.500</td><td>208.125</td></tr>
+                                <tr><td class="bold">Nexus300</td><td>300.000</td><td class="red">2.700.000</td><td>2.997.000</td><td>225.000</td><td>249.750</td></tr>
+                                <tr><td class="bold">MyGamer S250</td><td>400.000</td><td class="red">3.600.000</td><td>3.996.000</td><td>300.000</td><td>333.000</td></tr>
+                                <tr><td class="bold">Prime500</td><td>500.000</td><td class="red">4.500.000</td><td>4.995.000</td><td>375.000</td><td>416.250</td></tr>
+                                <tr><td class="bold">MyGamer G500</td><td>550.000</td><td class="red">4.950.000</td><td>5.494.500</td><td>412.500</td><td>457.875</td></tr>
+                                <tr><td class="bold">Wonder750</td><td>650.000</td><td class="red">5.850.000</td><td>6.493.500</td><td>487.500</td><td>541.125</td></tr>
+                                <tr><td class="bold">MyGamer D750</td><td>700.000</td><td class="red">6.300.000</td><td>6.993.000</td><td>525.000</td><td>582.750</td></tr>
+                                <tr><td class="bold">Ultra 1Gb</td><td>850.000</td><td class="red">7.650.000</td><td>8.491.500</td><td>637.500</td><td>707.625</td></tr>
+                                <tr><td class="bold">MyGamer P1Gb</td><td>900.000</td><td class="red">8.100.000</td><td>8.991.000</td><td>675.000</td><td>749.250</td></tr>
+                                <tr class="ap-section"><td colspan="6">Combo TV — AP 9 Get 3</td></tr>
+                                <tr><td class="bold">Neo100</td><td>295.000</td><td class="ap-na">✗</td><td class="ap-na">✗</td><td class="ap-na">✗</td><td class="ap-na">✗</td></tr>
+                                <tr><td class="bold">Velo150</td><td>335.000</td><td class="red">3.015.000</td><td>3.346.650</td><td>251.250</td><td>278.888</td></tr>
+                                <tr><td class="bold">Nexus300</td><td>385.000</td><td class="red">3.465.000</td><td>3.846.150</td><td>288.750</td><td>320.513</td></tr>
+                                <tr><td class="bold">MyGamer S250</td><td>485.000</td><td class="red">4.365.000</td><td>4.845.150</td><td>363.750</td><td>403.763</td></tr>
+                                <tr><td class="bold">Prime500</td><td>585.000</td><td class="red">5.265.000</td><td>5.844.150</td><td>438.750</td><td>487.013</td></tr>
+                                <tr><td class="bold">MyGamer G500</td><td>635.000</td><td class="red">5.715.000</td><td>6.343.650</td><td>476.250</td><td>528.638</td></tr>
+                                <tr><td class="bold">Wonder750</td><td>735.000</td><td class="red">6.615.000</td><td>7.342.650</td><td>551.250</td><td>611.888</td></tr>
+                                <tr><td class="bold">MyGamer D750</td><td>785.000</td><td class="red">7.065.000</td><td>7.842.150</td><td>588.750</td><td>653.513</td></tr>
+                                <tr><td class="bold">Ultra 1Gb</td><td>935.000</td><td class="red">8.415.000</td><td>9.340.650</td><td>701.250</td><td>778.388</td></tr>
+                                <tr><td class="bold">MyGamer P1Gb</td><td>985.000</td><td class="red">8.865.000</td><td>9.840.150</td><td>738.750</td><td>820.013</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="pkg-note">AP 9 Get 3: Bayar 9 bulan di muka, gratis 3 bulan = total 12 bulan layanan</p>
+                </div>
+
+                <!-- AP 12 GET 6 -->
+                <div class="subpanel" id="umum-ap12">
+                    <div class="ap-table-wrap">
+                        <table class="ap-table">
+                            <thead>
+                                <tr>
+                                    <th>Paket</th><th>Harga Tematik</th>
+                                    <th class="center" colspan="2">Harga AP (Before / After PPN)</th>
+                                    <th class="center" colspan="2">Setara/Bln (Before / After PPN)</th>
+                                </tr>
+                                <tr><th></th><th></th><th>Before PPN</th><th>After PPN</th><th>Before PPN</th><th>After PPN</th></tr>
+                            </thead>
+                            <tbody>
+                                <tr class="ap-section"><td colspan="6">Internet Only — AP 12 Get 6</td></tr>
+                                <tr><td class="bold">Neo100</td><td>210.000</td><td class="ap-na">✗</td><td class="ap-na">✗</td><td class="ap-na">✗</td><td class="ap-na">✗</td></tr>
+                                <tr><td class="bold">Velo150</td><td>250.000</td><td class="red">3.000.000</td><td>3.330.000</td><td>166.667</td><td>185.000</td></tr>
+                                <tr><td class="bold">Nexus300</td><td>300.000</td><td class="red">3.600.000</td><td>3.996.000</td><td>200.000</td><td>222.000</td></tr>
+                                <tr><td class="bold">MyGamer S250</td><td>400.000</td><td class="red">4.800.000</td><td>5.328.000</td><td>266.667</td><td>296.000</td></tr>
+                                <tr><td class="bold">Prime500</td><td>500.000</td><td class="red">6.000.000</td><td>6.660.000</td><td>333.333</td><td>370.000</td></tr>
+                                <tr><td class="bold">MyGamer G500</td><td>550.000</td><td class="red">6.600.000</td><td>7.326.000</td><td>366.667</td><td>407.000</td></tr>
+                                <tr><td class="bold">Wonder750</td><td>650.000</td><td class="red">7.800.000</td><td>8.658.000</td><td>433.333</td><td>481.000</td></tr>
+                                <tr><td class="bold">MyGamer D750</td><td>700.000</td><td class="red">8.400.000</td><td>9.324.000</td><td>466.667</td><td>518.000</td></tr>
+                                <tr><td class="bold">Ultra 1Gb</td><td>850.000</td><td class="red">10.200.000</td><td>11.322.000</td><td>566.667</td><td>629.000</td></tr>
+                                <tr><td class="bold">MyGamer P1Gb</td><td>900.000</td><td class="red">10.800.000</td><td>11.988.000</td><td>600.000</td><td>666.000</td></tr>
+                                <tr class="ap-section"><td colspan="6">Combo TV — AP 12 Get 6</td></tr>
+                                <tr><td class="bold">Neo100</td><td>295.000</td><td class="ap-na">✗</td><td class="ap-na">✗</td><td class="ap-na">✗</td><td class="ap-na">✗</td></tr>
+                                <tr><td class="bold">Velo150</td><td>335.000</td><td class="red">4.020.000</td><td>4.462.200</td><td>223.333</td><td>247.900</td></tr>
+                                <tr><td class="bold">Nexus300</td><td>385.000</td><td class="red">4.620.000</td><td>5.128.200</td><td>256.667</td><td>284.900</td></tr>
+                                <tr><td class="bold">MyGamer S250</td><td>485.000</td><td class="red">5.820.000</td><td>6.460.200</td><td>323.333</td><td>358.900</td></tr>
+                                <tr><td class="bold">Prime500</td><td>585.000</td><td class="red">7.020.000</td><td>7.792.200</td><td>390.000</td><td>432.900</td></tr>
+                                <tr><td class="bold">MyGamer G500</td><td>635.000</td><td class="red">7.620.000</td><td>8.458.200</td><td>423.333</td><td>469.900</td></tr>
+                                <tr><td class="bold">Wonder750</td><td>735.000</td><td class="red">8.820.000</td><td>9.790.200</td><td>490.000</td><td>543.900</td></tr>
+                                <tr><td class="bold">MyGamer D750</td><td>785.000</td><td class="red">9.420.000</td><td>10.456.200</td><td>523.333</td><td>580.900</td></tr>
+                                <tr><td class="bold">Ultra 1Gb</td><td>935.000</td><td class="red">11.220.000</td><td>12.454.200</td><td>623.333</td><td>691.900</td></tr>
+                                <tr><td class="bold">MyGamer P1Gb</td><td>985.000</td><td class="red">11.820.000</td><td>13.120.200</td><td>656.667</td><td>728.900</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="pkg-note">AP 12 Get 6: Bayar 12 bulan di muka, gratis 6 bulan = total 18 bulan · Hemat lebih banyak!</p>
+                </div>
+            </div><!-- /panel-umum -->
+
+            <!-- ── AREA LIPPO PROPERTY ── -->
+            <div class="pricing-panel" id="panel-lippo">
+                <p class="lippo-note">
+                    🏘️ Paket khusus untuk hunian &amp; kawasan properti milik <strong style="color:#ffaaad;">Lippo Group</strong> — Lippo Village, Lippo Cikarang, St. Moritz, Kemang Village, dll.
+                </p>
+                <div class="pkg-grid">
+                    <div class="pkg-card">
+                        <div class="pkg-name">Lippo Fast50</div>
+                        <div class="pkg-speed">50 Mbps</div>
+                        <div style="font-size:11px;color:#ff8c94;margin-bottom:12px;">Kode: LP05</div>
+                        <div class="pkg-price">Rp 300.000</div>
+                        <div class="pkg-price-sub">/bulan · <span style="color:#fbbf24;font-weight:600;">belum termasuk pajak</span></div>
+                        <div class="pkg-features">
+                            <span class="pkg-feat">Internet simetris 1:1</span>
+                            <span class="pkg-feat">Tanpa batas kuota</span>
+                            <span class="pkg-feat">Full Fiber Optic</span>
+                        </div>
+                    </div>
+                    <div class="pkg-card featured">
+                        <div class="pkg-badge">POPULER</div>
+                        <div class="pkg-name">Lippo Nova100</div>
+                        <div class="pkg-speed">100 Mbps</div>
+                        <div style="font-size:11px;color:#ff8c94;margin-bottom:12px;">Kode: LP06</div>
+                        <div class="pkg-price">Rp 375.000</div>
+                        <div class="pkg-price-sub">/bulan &nbsp;·&nbsp; <span style="color:#fbbf24;font-size:11px;font-weight:600;">belum termasuk pajak</span></div>
+                        <div class="pkg-features">
+                            <span class="pkg-feat">Internet simetris 1:1</span>
+                            <span class="pkg-feat">Tanpa batas kuota</span>
+                            <span class="pkg-feat">Full Fiber Optic</span>
+                        </div>
+                    </div>
+                    <div class="pkg-card featured">
+                        <div class="pkg-badge">RECOMMENDED</div>
+                        <div class="pkg-name">Lippo MyGamer250</div>
+                        <div class="pkg-speed">250 Mbps</div>
+                        <div style="font-size:11px;color:#ff8c94;margin-bottom:12px;">Kode: LP07</div>
+                        <div class="pkg-price">Rp 500.000</div>
+                        <div class="pkg-price-sub">/bulan &nbsp;·&nbsp; <span style="color:#fbbf24;font-size:11px;font-weight:600;">belum termasuk pajak</span></div>
+                        <div class="pkg-features">
+                            <span class="pkg-feat">Internet simetris 1:1</span>
+                            <span class="pkg-feat">Tanpa batas kuota</span>
+                            <span class="pkg-feat">Full Fiber Optic</span>
+                            <span class="pkg-feat">Cocok untuk gaming &amp; streaming</span>
+                        </div>
+                    </div>
+                    <div class="pkg-card">
+                        <div class="pkg-name">Lippo Prime500</div>
+                        <div class="pkg-speed">500 Mbps</div>
+                        <div style="font-size:11px;color:#ff8c94;margin-bottom:12px;">Kode: LP08</div>
+                        <div class="pkg-price">Rp 650.000</div>
+                        <div class="pkg-price-sub">/bulan &nbsp;·&nbsp; <span style="color:#fbbf24;font-size:11px;font-weight:600;">belum termasuk pajak</span></div>
+                        <div class="pkg-features">
+                            <span class="pkg-feat">Internet simetris 1:1</span>
+                            <span class="pkg-feat">Tanpa batas kuota</span>
+                            <span class="pkg-feat">Full Fiber Optic</span>
+                            <span class="pkg-feat">Ideal untuk rumah tangga besar</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="pkg-note">Paket Lippo hanya tersedia di kawasan properti Lippo Group. Hubungi kami untuk cek ketersediaan di lokasi Anda.</p>
+            </div><!-- /panel-lippo -->
+
+            <!-- ── AREA PARTNERSHIP ── -->
+            <div class="pricing-panel" id="panel-partner">
+                <p class="lippo-note">
+                    🤝 Paket khusus untuk mitra &amp; area partnership MyRepublic — berlangganan tahunan dengan harga lebih hemat. Cocok untuk properti, perumahan, dan kawasan komersial mitra.
+                </p>
+
+                <div class="pricing-subtabs" id="subtabs-partner">
+                    <button class="psubtab active" data-tab="partner" data-sub="annual">Tahunan (12 Bulan)</button>
+                    <button class="psubtab" data-tab="partner" data-sub="value3">Value 3 Bulanan</button>
+                </div>
+
+                <div class="subpanel active" id="partner-annual">
+                    <div class="pkg-grid">
+                        <div class="pkg-card">
+                            <div class="pkg-name">Value 30</div>
+                            <div class="pkg-speed">30 Mbps</div>
+                            <div style="font-size:11px;color:#ff8c94;margin-bottom:12px;">Kode: FS001</div>
+                            <div class="pkg-price">Rp 4.116.000</div>
+                            <div class="pkg-price-sub">/ 12 bulan &nbsp;·&nbsp; <span style="color:#fbbf24;font-size:11px;font-weight:600;">belum termasuk pajak</span></div>
+                            <div class="pkg-bonus">≈ Rp 343.000/bulan</div>
+                            <div class="pkg-features">
+                                <span class="pkg-feat">Internet simetris 1:1</span>
+                                <span class="pkg-feat">Tanpa batas kuota</span>
+                                <span class="pkg-feat">Full Fiber Optic</span>
+                                <span class="pkg-feat">Berlangganan 12 bulan</span>
+                            </div>
+                        </div>
+                        <div class="pkg-card featured">
+                            <div class="pkg-badge">POPULER</div>
+                            <div class="pkg-name">Fast 50</div>
+                            <div class="pkg-speed">50 Mbps</div>
+                            <div style="font-size:11px;color:#ff8c94;margin-bottom:12px;">Kode: FS003</div>
+                            <div class="pkg-price">Rp 5.448.000</div>
+                            <div class="pkg-price-sub">/ 12 bulan &nbsp;·&nbsp; <span style="color:#fbbf24;font-size:11px;font-weight:600;">belum termasuk pajak</span></div>
+                            <div class="pkg-bonus">≈ Rp 454.000/bulan</div>
+                            <div class="pkg-features">
+                                <span class="pkg-feat">Internet simetris 1:1</span>
+                                <span class="pkg-feat">Tanpa batas kuota</span>
+                                <span class="pkg-feat">Full Fiber Optic</span>
+                                <span class="pkg-feat">Berlangganan 12 bulan</span>
+                            </div>
+                        </div>
+                        <div class="pkg-card featured">
+                            <div class="pkg-badge">RECOMMENDED</div>
+                            <div class="pkg-name">Nova 100</div>
+                            <div class="pkg-speed">100 Mbps</div>
+                            <div style="font-size:11px;color:#ff8c94;margin-bottom:12px;">Kode: FS006</div>
+                            <div class="pkg-price">Rp 8.520.000</div>
+                            <div class="pkg-price-sub">/ 12 bulan &nbsp;·&nbsp; <span style="color:#fbbf24;font-size:11px;font-weight:600;">belum termasuk pajak</span></div>
+                            <div class="pkg-bonus">≈ Rp 710.000/bulan</div>
+                            <div class="pkg-features">
+                                <span class="pkg-feat">Internet simetris 1:1</span>
+                                <span class="pkg-feat">Tanpa batas kuota</span>
+                                <span class="pkg-feat">Full Fiber Optic</span>
+                                <span class="pkg-feat">Berlangganan 12 bulan</span>
+                            </div>
+                        </div>
+                        <div class="pkg-card">
+                            <div class="pkg-name">MyGamer 250</div>
+                            <div class="pkg-speed">250 Mbps</div>
+                            <div style="font-size:11px;color:#ff8c94;margin-bottom:12px;">Kode: FS014</div>
+                            <div class="pkg-price">Rp 9.984.000</div>
+                            <div class="pkg-price-sub">/ 12 bulan &nbsp;·&nbsp; <span style="color:#fbbf24;font-size:11px;font-weight:600;">belum termasuk pajak</span></div>
+                            <div class="pkg-bonus">≈ Rp 832.000/bulan</div>
+                            <div class="pkg-features">
+                                <span class="pkg-feat">Internet simetris 1:1</span>
+                                <span class="pkg-feat">Tanpa batas kuota</span>
+                                <span class="pkg-feat">Full Fiber Optic</span>
+                                <span class="pkg-feat">Cocok untuk gaming &amp; streaming</span>
+                                <span class="pkg-feat">Berlangganan 12 bulan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="pkg-note">Paket tahunan 12 bulan · Semua harga belum termasuk pajak · Hubungi kami untuk info lebih lanjut</p>
+                </div>
+
+                <div class="subpanel" id="partner-value3">
+                    <div style="max-width:480px;">
+                        <div class="pkg-card featured" style="max-width:360px;">
+                            <div class="pkg-badge">EKSKLUSIF</div>
+                            <div class="pkg-name">Value 30</div>
+                            <div class="pkg-speed">30 Mbps</div>
+                            <div style="font-size:11px;color:#ff8c94;margin-bottom:12px;">Kode: FS001 · Khusus 3 Bulanan</div>
+                            <div class="pkg-price">Rp 825.000</div>
+                            <div class="pkg-price-sub">/ 3 bulan &nbsp;·&nbsp; <span style="color:#fbbf24;font-size:11px;font-weight:600;">belum termasuk pajak</span></div>
+                            <div class="pkg-bonus">≈ Rp 275.000/bulan</div>
+                            <div class="pkg-features">
+                                <span class="pkg-feat">Internet simetris 1:1</span>
+                                <span class="pkg-feat">Tanpa batas kuota</span>
+                                <span class="pkg-feat">Full Fiber Optic</span>
+                                <span class="pkg-feat">Hanya tersedia untuk paket Value</span>
+                                <span class="pkg-feat">Berlangganan per 3 bulan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="pkg-note" style="max-width:480px;">Paket 3 bulanan hanya tersedia untuk Value 30 Mbps di Area Partnership · Belum termasuk pajak</p>
+                </div>
+            </div><!-- /panel-partner -->
+        </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section id="faq" style="padding:80px 0;background:var(--navy2);border-top:1px solid var(--border-soft);">
+        <div class="container">
+            <p class="section-label reveal" style="text-align:center">FAQ</p>
+            <h2 class="section-title reveal" style="text-align:center">Pertanyaan Umum (FAQ MyRepublic)</h2>
+            <div style="max-width:720px;margin:48px auto 0;display:flex;flex-direction:column;gap:10px;">
+                <div class="faq-item reveal">
+                    <div class="faq-q">Apakah ada biaya instalasi? <span class="faq-arrow">+</span></div>
+                    <div class="faq-a"><p>Tidak ada! Instalasi MyRepublic sepenuhnya gratis tanpa biaya tersembunyi.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-q">Berapa lama proses pemasangan? <span class="faq-arrow">+</span></div>
+                    <div class="faq-a"><p>Proses instalasi biasanya memakan waktu 1–7 hari kerja setelah pendaftaran disetujui, tergantung ketersediaan teknisi di area Anda.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-q">Apakah ada kontrak minimal berlangganan? <span class="faq-arrow">+</span></div>
+                    <div class="faq-a"><p>Paket bulanan tidak terikat kontrak panjang dengan S&K berlaku. Untuk Advance Payment (AP), masa berlangganan sesuai paket yang dipilih dengan keuntungan hemat lebih banyak.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-q">Apa itu paket Advance Payment 9+3 dan 12+6? <span class="faq-arrow">+</span></div>
+                    <div class="faq-a"><p>AP 9+3: bayar 9 bulan di muka, gratis 3 bulan (total 12 bulan). AP 12+6: bayar 12 bulan di muka, gratis 6 bulan (total 18 bulan). Harga per bulan lebih hemat dibanding paket bulanan biasa.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-q">Bagaimana cara melakukan pembayaran tagihan MyRepublic? <span class="faq-arrow">+</span></div>
+                    <div class="faq-a"><p>Pembayaran tagihan bulanan dapat dilakukan melalui e-wallet, mobile banking, internet banking, ATM, minimarket rekanan (Indomaret/Alfamart), serta fitur auto-debit.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-q">Apa yang harus dilakukan jika internet mengalami gangguan atau lambat? <span class="faq-arrow">+</span></div>
+                    <div class="faq-a"><p>Coba restart perangkat router/modem Anda terlebih dahulu. Jika kendala masih berlanjut, buka <a href="#" data-open-bantuan style="color:var(--accent2);">Pusat Bantuan</a> untuk panduan dan kontak agent kami.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-q">Bagaimana cara melakukan upgrade kecepatan paket? <span class="faq-arrow">+</span></div>
+                    <div class="faq-a"><p>Anda dapat mengajukan permohonan upgrade paket internet melalui sales resmi atau pusat layanan pelanggan MyRepublic.</p></div>
+                </div>
+                <div class="faq-item reveal">
+                    <div class="faq-q">Apakah tersedia untuk area saya? <span class="faq-arrow">+</span></div>
+                    <div class="faq-a"><p>Hubungi kami via WhatsApp atau klik tombol Daftar Sekarang untuk cek ketersediaan jaringan di alamat Anda.</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="cta-band">
+        <div class="container">
+            <div class="cta-box reveal">
+                <h2>Siap Berlangganan?</h2>
+                <p>Gratis instalasi. Internet cepat tanpa batas. Daftar sekarang dan nikmati koneksi terbaik.</p>
+                <div class="cta-actions">
+                    <a href="https://wa.me/6285167313400" class="btn-primary">💬 Daftar via WhatsApp</a>
+                    <a href="#harga" class="btn-ghost">📦 Lihat Paket Lagi</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER ── -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">My<span>Republic</span></div>
+            <p>© 2026 MyRepublic Indonesia · Internet Fiber Optic Terbaik · member of Sinarmas</p>
+        </div>
+    </footer>
+
+    <!-- ══════════ POPUP PILIHAN ══════════ -->
+    <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal">
+            <button class="modal-close" id="modal-close" aria-label="Tutup">×</button>
+
+            <!-- STEP 1: Pilihan awal -->
+            <div class="modal-step active" id="step-pilih">
+                <div class="modal-logo">My<span>Republic</span></div>
+                <h3 id="modal-title">Selamat datang! Ada yang bisa kami bantu?</h3>
+                <p class="modal-sub">Silakan pilih salah satu di bawah ini</p>
+
+                <button class="choice-btn" id="choice-baru">
+                    <span class="choice-num">1</span>
+                    <span class="choice-text">
+                        <strong>Berlangganan Baru WiFi MyRepublic</strong>
+                        <span>Lihat paket &amp; harga internet fiber optic</span>
+                    </span>
+                </button>
+
+                <button class="choice-btn" id="choice-bantuan">
+                    <span class="choice-num">2</span>
+                    <span class="choice-text">
+                        <strong>Komplain Kendala, Tanya Tagihan dan Informasi Lainnya</strong>
+                        <span>Cek status, panduan pembayaran &amp; WiFi, hubungi agent</span>
+                    </span>
+                </button>
+            </div>
+
+            <!-- STEP 2: Informasi bantuan -->
+            <div class="modal-step" id="step-bantuan">
+                <h3>Pusat Bantuan MyRepublic</h3>
+                <p class="modal-sub">Pilih layanan yang Anda butuhkan</p>
+
+                <div class="info-list">
+                    <a class="info-item" href="https://support.myrepublic.co.id" target="_blank" rel="noopener noreferrer">
+                        <strong>🔎 Cek Status Perangkat &amp; Tagihan</strong>
+                        <span>support.myrepublic.co.id</span>
+                    </a>
+                    <a class="info-item" href="https://myrepublic.co.id/help?tab=metode%20pembayaran" target="_blank" rel="noopener noreferrer">
+                        <strong>💳 Panduan Pembayaran</strong>
+                        <span>myrepublic.co.id/help?tab=metode%20pembayaran</span>
+                    </a>
+                    <a class="info-item" href="https://myrepublic.co.id/help?tab=panduan" target="_blank" rel="noopener noreferrer">
+                        <strong>📶 Panduan WiFi (SSID &amp; Password)</strong>
+                        <span>myrepublic.co.id/help?tab=panduan</span>
+                    </a>
+                    <div class="info-item">
+                        <strong>📞 Butuh bantuan Agent?</strong>
+                        <p>Silakan hubungi MyRepublic melalui <b>WhatsApp Call (bebas pulsa)</b> di nomor
+                            <a href="https://wa.me/6288981500818" target="_blank" rel="noopener noreferrer" style="color:#ffaaad;font-weight:700;">088981500818</a>,
+                            atau tekan ikon 📞 Panggil / Call di atas.</p>
+                    </div>
+                </div>
+
+                <a class="btn-ig" href="https://www.instagram.com/myrepublicindonesia/" target="_blank" rel="noopener noreferrer">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    Atau DM Kami di Instagram
+                </a>
+                <button class="btn-back" id="btn-back">← Kembali ke pilihan</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ── FAQ ACCORDION ──
+        document.querySelectorAll('.faq-q').forEach(q => {
+            q.addEventListener('click', () => {
+                const item = q.parentElement;
+                const isOpen = item.classList.contains('open');
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+                if (!isOpen) item.classList.add('open');
+            });
+        });
+
+        // ── SCROLL REVEAL ──
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((e, i) => {
+                if (e.isIntersecting) {
+                    setTimeout(() => e.target.classList.add('visible'), i * 70);
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.08 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // ── PRICING TABS ──
+        document.querySelectorAll('.ptab').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const id = btn.dataset.tab;
+                document.querySelectorAll('.pricing-panel').forEach(p => p.classList.remove('active'));
+                document.querySelectorAll('.ptab').forEach(b => b.classList.remove('active'));
+                document.getElementById('panel-' + id).classList.add('active');
+                btn.classList.add('active');
+            });
+        });
+        document.querySelectorAll('.psubtab').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const tabId = btn.dataset.tab;
+                const subId = btn.dataset.sub;
+                const panel = document.getElementById('panel-' + tabId);
+                panel.querySelectorAll('.subpanel').forEach(p => p.classList.remove('active'));
+                panel.querySelectorAll('.psubtab').forEach(b => b.classList.remove('active'));
+                document.getElementById(tabId + '-' + subId).classList.add('active');
+                btn.classList.add('active');
+            });
+        });
+
+        // ── POPUP PILIHAN ──
+        const overlay    = document.getElementById('modal-overlay');
+        const stepPilih  = document.getElementById('step-pilih');
+        const stepBantuan = document.getElementById('step-bantuan');
+
+        function showStep(which) {
+            stepPilih.classList.toggle('active', which === 'pilih');
+            stepBantuan.classList.toggle('active', which === 'bantuan');
+        }
+        function openModal(step) {
+            showStep(step || 'pilih');
+            overlay.classList.add('show');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal() {
+            overlay.classList.remove('show');
+            document.body.style.overflow = '';
+            try { sessionStorage.setItem('mr_popup_seen', '1'); } catch (e) {}
+        }
+
+        // Pilihan 1: Berlangganan baru -> arahkan ke halaman utama (daftar paket)
+        document.getElementById('choice-baru').addEventListener('click', () => {
+            closeModal();
+            if (location.pathname !== '/' && location.pathname !== '/index.html' && !location.pathname.endsWith('/')) {
+                location.href = '/#harga';
+            } else {
+                const t = document.getElementById('harga');
+                if (t) t.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+        // Pilihan 2: Komplain / tagihan / info lainnya
+        document.getElementById('choice-bantuan').addEventListener('click', () => showStep('bantuan'));
+        document.getElementById('btn-back').addEventListener('click', () => showStep('pilih'));
+        document.getElementById('modal-close').addEventListener('click', closeModal);
+        overlay.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+        // Link "Pusat Bantuan" di navbar / FAQ langsung membuka info bantuan
+        document.querySelectorAll('[data-open-bantuan]').forEach(el => {
+            el.addEventListener('click', e => { e.preventDefault(); openModal('bantuan'); });
+        });
+
+        // Tampilkan popup saat halaman pertama kali dibuka (sekali per sesi)
+        window.addEventListener('load', () => {
+            let seen = false;
+            try { seen = sessionStorage.getItem('mr_popup_seen') === '1'; } catch (e) {}
+            if (!seen) setTimeout(() => openModal('pilih'), 400);
+        });
+    </script>
+</body>
+</html>
